@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcoo_llm_docs=globalThis.webpackChunkcoo_llm_docs||[]).push([[6366],{6366:(c,e,l)=>{l.d(e,{createArchitectureServices:()=>o.S});var o=l(8980);l(7960)}}]);

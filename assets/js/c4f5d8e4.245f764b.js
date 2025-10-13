@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcoo_llm_docs=globalThis.webpackChunkcoo_llm_docs||[]).push([[2634],{192:(o,l,c)=>{c.r(l),c.d(l,{default:()=>n});var e=c(6540);function n(){return(0,e.useEffect)(()=>{window.location.href="/docs/Intro/Overview"},[]),null}}}]);
