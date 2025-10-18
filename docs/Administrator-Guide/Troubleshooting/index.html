@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Administrator-Guide/Troubleshooting" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.1">
+<title data-rh="true">Troubleshooting | COO-LLM</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://coo-llm.github.io/docs/img/coo-llm-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://coo-llm.github.io/docs/img/coo-llm-social-card.jpg"><meta data-rh="true" property="og:url" content="https://coo-llm.github.io/docs/docs/Administrator-Guide/Troubleshooting"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Troubleshooting | COO-LLM"><meta data-rh="true" name="description" content="Guide to troubleshooting common issues with COO-LLM."><meta data-rh="true" property="og:description" content="Guide to troubleshooting common issues with COO-LLM."><link data-rh="true" rel="icon" href="/docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://coo-llm.github.io/docs/docs/Administrator-Guide/Troubleshooting"><link data-rh="true" rel="alternate" href="https://coo-llm.github.io/docs/docs/Administrator-Guide/Troubleshooting" hreflang="en"><link data-rh="true" rel="alternate" href="https://coo-llm.github.io/docs/docs/Administrator-Guide/Troubleshooting" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Troubleshooting","item":"https://coo-llm.github.io/docs/docs/Administrator-Guide/Troubleshooting"}]}</script><link rel="stylesheet" href="/docs/assets/css/styles.4f3d57c7.css">
+<script src="/docs/assets/js/runtime~main.b7b87bd9.js" defer="defer"></script>
+<script src="/docs/assets/js/main.f7434157.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs/"><div class="navbar__logo"><img src="/docs/img/logo.png" alt="COO-LLM Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs/img/logo.png" alt="COO-LLM Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">COO-LLM</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/docs/Intro/Overview">Docs</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/COO-LLM/coo-llm-main" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/docs/Intro/Overview"><span title="🚀 Getting Started" class="categoryLinkLabel_W154">🚀 Getting Started</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Intro/Overview"><span title="COO-LLM Overview" class="linkLabel_WmDU">COO-LLM Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Getting-Started/Installation"><span title="Installation" class="linkLabel_WmDU">Installation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Getting-Started/Quick-Start"><span title="Quick Start" class="linkLabel_WmDU">Quick Start</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Getting-Started/First-Steps"><span title="First Steps" class="linkLabel_WmDU">First Steps</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Getting-Started/Whats-Next"><span title="What&#x27;s Next" class="linkLabel_WmDU">What&#x27;s Next</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Guides/Deployment"><span title="Deployment" class="linkLabel_WmDU">Deployment</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/docs/User-Guide/API-Usage"><span title="👤 User Guide" class="categoryLinkLabel_W154">👤 User Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/User-Guide/API-Usage"><span title="API-Usage" class="linkLabel_WmDU">API-Usage</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/User-Guide/Practical-Usage"><span title="Practical Usage Guide" class="linkLabel_WmDU">Practical Usage Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Guides/Providers"><span title="Providers" class="linkLabel_WmDU">Providers</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/User-Guide/Examples"><span title="Examples" class="linkLabel_WmDU">Examples</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/docs/Administrator-Guide/Overview"><span title="⚙️ Administrator Guide" class="categoryLinkLabel_W154">⚙️ Administrator Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Administrator-Guide/Overview"><span title="Administrator Guide Overview" class="linkLabel_WmDU">Administrator Guide Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Guides/Configuration"><span title="Configuration" class="linkLabel_WmDU">Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Administrator-Guide/Monitoring"><span title="Monitoring &amp; Metrics" class="linkLabel_WmDU">Monitoring &amp; Metrics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/docs/Administrator-Guide/Troubleshooting"><span title="Troubleshooting" class="linkLabel_WmDU">Troubleshooting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Administrator-Guide/Web-UI"><span title="Web UI Administration" class="linkLabel_WmDU">Web UI Administration</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/docs/Intro/Architecture"><span title="🔧 Developer Guide" class="categoryLinkLabel_W154">🔧 Developer Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Intro/Architecture"><span title="Architecture" class="linkLabel_WmDU">Architecture</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/docs/Developer-Guide/Providers/OpenAI"><span title="Providers" class="categoryLinkLabel_W154">Providers</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/docs/Reference/Admin-API"><span title="API Reference" class="categoryLinkLabel_W154">API Reference</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Reference/Balancer"><span title="Load Balancer" class="linkLabel_WmDU">Load Balancer</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/docs/Reference/Storage"><span title="Storage" class="categoryLinkLabel_W154">Storage</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/docs/Reference/Logging"><span title="Logging" class="categoryLinkLabel_W154">Logging</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Developer-Guide/Testing"><span title="Testing" class="linkLabel_WmDU">Testing</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Contributing/Guidelines"><span title="Contributing" class="linkLabel_WmDU">Contributing</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Contributing/Changelog"><span title="Changelog" class="linkLabel_WmDU">Changelog</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/docs/Reference/Config-Schema"><span title="📚 Reference" class="categoryLinkLabel_W154">📚 Reference</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Reference/Config-Schema"><span title="Configuration Schema" class="linkLabel_WmDU">Configuration Schema</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Reference/Error-Codes"><span title="Error Codes &amp; Troubleshooting" class="linkLabel_WmDU">Error Codes &amp; Troubleshooting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/docs/Reference/Glossary"><span title="Glossary" class="linkLabel_WmDU">Glossary</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">⚙️ Administrator Guide</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Troubleshooting</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Troubleshooting</h1></header>
+<p>Guide to troubleshooting common issues with COO-LLM.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="startup-issues">Startup Issues<a href="#startup-issues" class="hash-link" aria-label="Direct link to Startup Issues" title="Direct link to Startup Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="server-wont-start">Server Won&#x27;t Start<a href="#server-wont-start" class="hash-link" aria-label="Direct link to Server Won&#x27;t Start" title="Direct link to Server Won&#x27;t Start" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Server exits immediately</li>
+<li>Error: &quot;Failed to load config&quot;</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Check config file path: <code>coo-llm --config /path/to/config.yaml</code></li>
+<li>Validate YAML syntax: <code>yamllint config.yaml</code></li>
+<li>Check required fields: <code>admin_api_key</code>, <code>llm_providers</code></li>
+<li>Verify environment variables: <code>echo $OPENAI_API_KEY</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="port-already-in-use">Port Already in Use<a href="#port-already-in-use" class="hash-link" aria-label="Direct link to Port Already in Use" title="Direct link to Port Already in Use" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Error: &quot;listen tcp :2906: bind: address already in use&quot;</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Change port in config: <code>server.listen: &quot;:2907&quot;</code></li>
+<li>Find process using port: <code>lsof -i :2906</code></li>
+<li>Kill conflicting process: <code>kill -9 &lt;PID&gt;</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="provider-api-keys-invalid">Provider API keys invalid<a href="#provider-api-keys-invalid" class="hash-link" aria-label="Direct link to Provider API keys invalid" title="Direct link to Provider API keys invalid" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Startup succeeds but all requests fail</li>
+<li>Logs show &quot;invalid api key&quot;</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Verify API keys in environment: <code>echo $OPENAI_API_KEY | head -c 10</code></li>
+<li>Test keys manually with provider API</li>
+<li>Check key format (some providers require &quot;sk-&quot; prefix)</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="runtime-issues">Runtime Issues<a href="#runtime-issues" class="hash-link" aria-label="Direct link to Runtime Issues" title="Direct link to Runtime Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="high-latency">High Latency<a href="#high-latency" class="hash-link" aria-label="Direct link to High Latency" title="Direct link to High Latency" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Requests take &gt;5 seconds</li>
+<li>Metrics show high P95 latency</li>
+</ul>
+<p><strong>Causes &amp; Solutions:</strong></p>
+<ol>
+<li><strong>Provider API slow</strong>: Switch to different provider or region</li>
+<li><strong>Rate limiting</strong>: Check <code>limits.req_per_min</code>, increase if needed</li>
+<li><strong>Network issues</strong>: Test connectivity to provider APIs</li>
+<li><strong>Storage slow</strong>: Switch from file to Redis for runtime storage</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rate-limit-errors">Rate Limit Errors<a href="#rate-limit-errors" class="hash-link" aria-label="Direct link to Rate Limit Errors" title="Direct link to Rate Limit Errors" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>HTTP 429 responses</li>
+<li>&quot;rate limit exceeded&quot; in logs</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Increase limits</strong>: Update <code>limits.req_per_min</code> in config</li>
+<li><strong>Add more keys</strong>: Multiple API keys per provider for load balancing</li>
+<li><strong>Implement backoff</strong>: In client code, exponential backoff on 429</li>
+<li><strong>Monitor usage</strong>: Check admin API for per-key usage stats</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="authentication-failures">Authentication Failures<a href="#authentication-failures" class="hash-link" aria-label="Direct link to Authentication Failures" title="Direct link to Authentication Failures" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>HTTP 401/403 responses</li>
+<li>&quot;unauthorized&quot; or &quot;forbidden&quot; errors</li>
+</ul>
+<p><strong>Common Issues:</strong></p>
+<ol>
+<li><strong>Wrong API key</strong>: Verify key in <code>Authorization: Bearer &lt;key&gt;</code></li>
+<li><strong>Key not in config</strong>: Check <code>api_keys</code> section</li>
+<li><strong>Provider restrictions</strong>: Ensure key allows requested provider</li>
+<li><strong>Key expired</strong>: Some providers rotate keys periodically</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="provider-errors">Provider Errors<a href="#provider-errors" class="hash-link" aria-label="Direct link to Provider Errors" title="Direct link to Provider Errors" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>HTTP 500 responses</li>
+<li>&quot;provider error&quot; in logs</li>
+</ul>
+<p><strong>Troubleshooting Steps:</strong></p>
+<ol>
+<li>Check provider status: Visit provider&#x27;s status page</li>
+<li>Test provider API directly: Use curl with same key</li>
+<li>Switch providers: Update model to use different provider</li>
+<li>Check quotas: Some providers have daily/monthly limits</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="configuration-issues">Configuration Issues<a href="#configuration-issues" class="hash-link" aria-label="Direct link to Configuration Issues" title="Direct link to Configuration Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="model-not-found">Model Not Found<a href="#model-not-found" class="hash-link" aria-label="Direct link to Model Not Found" title="Direct link to Model Not Found" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>&quot;model not found&quot; error</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Use full syntax: <code>openai:gpt-4o</code> instead of <code>gpt-4o</code></li>
+<li>Check provider config: Ensure model exists in <code>llm_providers</code></li>
+<li>Verify spelling: Case-sensitive model names</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="invalid-configuration">Invalid Configuration<a href="#invalid-configuration" class="hash-link" aria-label="Direct link to Invalid Configuration" title="Direct link to Invalid Configuration" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Server fails to start with validation errors</li>
+</ul>
+<p><strong>Common Validation Errors:</strong></p>
+<ol>
+<li><strong>Missing required fields</strong>: <code>admin_api_key</code>, provider <code>api_keys</code></li>
+<li><strong>Invalid URLs</strong>: Check <code>base_url</code> format</li>
+<li><strong>Type mismatches</strong>: Ensure numbers are numeric, not strings</li>
+<li><strong>Duplicate IDs</strong>: Provider and key IDs must be unique</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="performance-issues">Performance Issues<a href="#performance-issues" class="hash-link" aria-label="Direct link to Performance Issues" title="Direct link to Performance Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="memory-usage-high">Memory Usage High<a href="#memory-usage-high" class="hash-link" aria-label="Direct link to Memory Usage High" title="Direct link to Memory Usage High" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Server consumes excessive RAM</li>
+<li>OOM kills in containers</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Switch storage</strong>: Use Redis instead of SQL for large deployments</li>
+<li><strong>Reduce cache TTL</strong>: Lower <code>cache.ttl_seconds</code></li>
+<li><strong>Monitor goroutines</strong>: Check for leaks with pprof</li>
+<li><strong>Limit concurrent requests</strong>: Use reverse proxy limits</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="storage-issues">Storage Issues<a href="#storage-issues" class="hash-link" aria-label="Direct link to Storage Issues" title="Direct link to Storage Issues" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>&quot;connection refused&quot; to storage backend</li>
+<li>Slow response times</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Redis connection</strong>: Verify <code>addr</code> and <code>password</code></li>
+<li><strong>InfluxDB setup</strong>: Check URL, token, org, bucket</li>
+<li><strong>File permissions</strong>: Ensure write access to <code>./data/</code></li>
+<li><strong>Network connectivity</strong>: Test connection to storage service</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="web-ui-issues">Web UI Issues<a href="#web-ui-issues" class="hash-link" aria-label="Direct link to Web UI Issues" title="Direct link to Web UI Issues" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ui-not-loading">UI Not Loading<a href="#ui-not-loading" class="hash-link" aria-label="Direct link to UI Not Loading" title="Direct link to UI Not Loading" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>404 on <code>http://localhost:2906/</code></li>
+<li>Blank page or &quot;not found&quot;</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Build missing</strong>: Run <code>npm run build</code> in <code>webui/</code> directory</li>
+<li><strong>Wrong path</strong>: Check <code>web_ui_path</code> in config</li>
+<li><strong>CORS issues</strong>: Ensure requests from correct origin</li>
+<li><strong>Admin credentials</strong>: Default is admin/password</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="custom-ui-not-working">Custom UI Not Working<a href="#custom-ui-not-working" class="hash-link" aria-label="Direct link to Custom UI Not Working" title="Direct link to Custom UI Not Working" translate="no">​</a></h3>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Custom UI path specified but not loading</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Path exists</strong>: <code>ls -la /path/to/custom/ui/</code></li>
+<li><strong>Build artifacts</strong>: Ensure <code>index.html</code> and assets exist</li>
+<li><strong>Permissions</strong>: Web server must read the files</li>
+<li><strong>SPA routing</strong>: Custom UI must handle client-side routing</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="logging--debugging">Logging &amp; Debugging<a href="#logging--debugging" class="hash-link" aria-label="Direct link to Logging &amp; Debugging" title="Direct link to Logging &amp; Debugging" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="enable-debug-logging">Enable Debug Logging<a href="#enable-debug-logging" class="hash-link" aria-label="Direct link to Enable Debug Logging" title="Direct link to Enable Debug Logging" translate="no">​</a></h3>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">logging</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">level</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;debug&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">file</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">enabled</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">path</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;./debug.log&quot;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="common-debug-steps">Common Debug Steps<a href="#common-debug-steps" class="hash-link" aria-label="Direct link to Common Debug Steps" title="Direct link to Common Debug Steps" translate="no">​</a></h3>
+<ol>
+<li><strong>Check logs</strong>: <code>tail -f /var/log/coo-llm/app.log</code></li>
+<li><strong>Enable pprof</strong>: Access <code>http://localhost:2906/debug/pprof/</code></li>
+<li><strong>Test connectivity</strong>: <code>curl -v http://provider-api.com</code></li>
+<li><strong>Validate config</strong>: <code>coo-llm --config config.yaml --validate</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="useful-commands">Useful Commands<a href="#useful-commands" class="hash-link" aria-label="Direct link to Useful Commands" title="Direct link to Useful Commands" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Check open files/connections</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">lsof -p $(pgrep coo-llm)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Monitor system resources</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">top -p $(pgrep coo-llm)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Test API manually</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">curl -v -H &quot;Authorization: Bearer test-key&quot; \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  http://localhost:2906/v1/chat/completions \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  -d &#x27;{&quot;model&quot;: &quot;openai:gpt-4o&quot;, &quot;messages&quot;: [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;test&quot;}]}&#x27;</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="troubleshooting-workflow">Troubleshooting Workflow<a href="#troubleshooting-workflow" class="hash-link" aria-label="Direct link to Troubleshooting Workflow" title="Direct link to Troubleshooting Workflow" translate="no">​</a></h2>
+<!-- -->
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-help">Getting Help<a href="#getting-help" class="hash-link" aria-label="Direct link to Getting Help" title="Direct link to Getting Help" translate="no">​</a></h2>
+<p>If issues persist:</p>
+<ol>
+<li><strong>Check GitHub Issues</strong>: Search for similar problems</li>
+<li><strong>Collect diagnostics</strong>:<!-- -->
+<ul>
+<li>Config file (redact secrets)</li>
+<li>Log files</li>
+<li>System info: <code>uname -a</code>, <code>go version</code></li>
+</ul>
+</li>
+<li><strong>Open new issue</strong>: Include full error logs and reproduction steps</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="prevention">Prevention<a href="#prevention" class="hash-link" aria-label="Direct link to Prevention" title="Direct link to Prevention" translate="no">​</a></h2>
+<ul>
+<li><strong>Monitor regularly</strong>: Set up alerts for error rates &gt;5%</li>
+<li><strong>Test deployments</strong>: Use staging environment before production</li>
+<li><strong>Keep updated</strong>: Monitor releases for bug fixes</li>
+<li><strong>Backup configs</strong>: Version control configuration files</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/docs/tags/administrator-guide">administrator-guide</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/docs/docs/tags/troubleshooting">troubleshooting</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/coo-llm/coo-llm-main/tree/main/docs/content/content/Administrator-Guide/Troubleshooting.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/docs/Administrator-Guide/Monitoring"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Monitoring &amp; Metrics</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/docs/Administrator-Guide/Web-UI"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Web UI Administration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#startup-issues" class="table-of-contents__link toc-highlight">Startup Issues</a><ul><li><a href="#server-wont-start" class="table-of-contents__link toc-highlight">Server Won&#39;t Start</a></li><li><a href="#port-already-in-use" class="table-of-contents__link toc-highlight">Port Already in Use</a></li><li><a href="#provider-api-keys-invalid" class="table-of-contents__link toc-highlight">Provider API keys invalid</a></li></ul></li><li><a href="#runtime-issues" class="table-of-contents__link toc-highlight">Runtime Issues</a><ul><li><a href="#high-latency" class="table-of-contents__link toc-highlight">High Latency</a></li><li><a href="#rate-limit-errors" class="table-of-contents__link toc-highlight">Rate Limit Errors</a></li><li><a href="#authentication-failures" class="table-of-contents__link toc-highlight">Authentication Failures</a></li><li><a href="#provider-errors" class="table-of-contents__link toc-highlight">Provider Errors</a></li></ul></li><li><a href="#configuration-issues" class="table-of-contents__link toc-highlight">Configuration Issues</a><ul><li><a href="#model-not-found" class="table-of-contents__link toc-highlight">Model Not Found</a></li><li><a href="#invalid-configuration" class="table-of-contents__link toc-highlight">Invalid Configuration</a></li></ul></li><li><a href="#performance-issues" class="table-of-contents__link toc-highlight">Performance Issues</a><ul><li><a href="#memory-usage-high" class="table-of-contents__link toc-highlight">Memory Usage High</a></li><li><a href="#storage-issues" class="table-of-contents__link toc-highlight">Storage Issues</a></li></ul></li><li><a href="#web-ui-issues" class="table-of-contents__link toc-highlight">Web UI Issues</a><ul><li><a href="#ui-not-loading" class="table-of-contents__link toc-highlight">UI Not Loading</a></li><li><a href="#custom-ui-not-working" class="table-of-contents__link toc-highlight">Custom UI Not Working</a></li></ul></li><li><a href="#logging--debugging" class="table-of-contents__link toc-highlight">Logging &amp; Debugging</a><ul><li><a href="#enable-debug-logging" class="table-of-contents__link toc-highlight">Enable Debug Logging</a></li><li><a href="#common-debug-steps" class="table-of-contents__link toc-highlight">Common Debug Steps</a></li><li><a href="#useful-commands" class="table-of-contents__link toc-highlight">Useful Commands</a></li></ul></li><li><a href="#troubleshooting-workflow" class="table-of-contents__link toc-highlight">Troubleshooting Workflow</a></li><li><a href="#getting-help" class="table-of-contents__link toc-highlight">Getting Help</a></li><li><a href="#prevention" class="table-of-contents__link toc-highlight">Prevention</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro/overview">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/guides/configuration">Configuration</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/reference/api">API Reference</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/COO-LLM/coo-llm-main" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/COO-LLM/coo-llm-main/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">Issues<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/COO-LLM/coo-llm-main/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discussions<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/contributing/guidelines">Contributing</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 COO-LLM.</div></div></div></footer></div>
+</body>
+</html>
